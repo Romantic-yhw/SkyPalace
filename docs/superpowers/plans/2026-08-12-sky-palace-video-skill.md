@@ -426,7 +426,7 @@ git commit -m "docs: add sky palace skill usage guide"
 **Files:**
 - Modify as failures require: `skills/make-sky-palace-video/**`, `README.md`, `tests/**`
 
-- [ ] **Step 1: Run all unit and contract tests**
+- [x] **Step 1: Run all unit and contract tests**
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -434,7 +434,7 @@ python3 -m unittest discover -s tests -v
 
 Expected: all tests PASS with no warnings.
 
-- [ ] **Step 2: Run official Skill validation with the bundled Python runtime**
+- [x] **Step 2: Run official Skill validation with the bundled Python runtime**
 
 ```bash
 /Users/admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
@@ -444,7 +444,7 @@ Expected: all tests PASS with no warnings.
 
 Expected: `Skill is valid!`
 
-- [ ] **Step 3: Exercise the initializer and validator in a temporary directory**
+- [x] **Step 3: Exercise the initializer and validator in a temporary directory**
 
 ```bash
 tmpdir="$(mktemp -d)"
@@ -456,7 +456,7 @@ python3 skills/make-sky-palace-video/scripts/validate_package.py "$tmpdir/moon-g
 
 Expected: initializer succeeds; the unfilled package fails validation with explicit missing-storyboard and prompt errors rather than a traceback.
 
-- [ ] **Step 4: Validate the checked-in valid and invalid fixtures**
+- [x] **Step 4: Validate the checked-in valid and invalid fixtures**
 
 ```bash
 python3 skills/make-sky-palace-video/scripts/validate_package.py tests/fixtures/valid-package
@@ -465,7 +465,7 @@ python3 skills/make-sky-palace-video/scripts/validate_package.py tests/fixtures/
 
 Expected: valid exits `0`; invalid exits nonzero and lists the intended defects.
 
-- [ ] **Step 5: Run repository hygiene checks**
+- [x] **Step 5: Run repository hygiene checks**
 
 ```bash
 git diff --check
@@ -475,7 +475,7 @@ git status --short
 
 Expected: no placeholders, secrets or AppleDouble files; only intended changes.
 
-- [ ] **Step 6: Commit validation fixes if any**
+- [x] **Step 6: Commit validation fixes if any**
 
 ```bash
 git add README.md skills tests docs/superpowers/plans/2026-08-12-sky-palace-video-skill.md
