@@ -10,6 +10,9 @@
       "primary_wonder": "巨月内部开启白玉天门",
       "impossible_relationship": "直径数千公里的月轮内部拥有向云海开启的实体宫门",
       "scale_ladder": ["人物", "白鸟", "山岳级门柱", "巨月"],
+      "character_mode": "tiny",
+      "character_height_percent": 0.5,
+      "colossus_percent": 55,
       "negative_space_percent": 34,
       "action_space_percent": 27
     },
@@ -18,6 +21,9 @@
       "primary_wonder": "倒悬天河托举浮空宫阙",
       "impossible_relationship": "天河从云海逆流向天空并托住大陆级天宫",
       "scale_ladder": ["人物", "桥栏", "浮空山峰", "天宫大陆"],
+      "character_mode": "tiny",
+      "character_height_percent": 0.45,
+      "colossus_percent": 58,
       "negative_space_percent": 38,
       "action_space_percent": 25
     }

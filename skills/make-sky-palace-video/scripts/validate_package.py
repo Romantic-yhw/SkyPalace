@@ -134,6 +134,27 @@ def validate_shots(brief: dict[str, object], result: ValidationResult) -> int:
                 f"{prefix}.scale_ladder 必须包含至少四个不同层级"
             )
 
+        character_mode = shot.get("character_mode")
+        character_height = shot.get("character_height_percent")
+        if character_mode == "none":
+            if character_height not in {None, 0, 0.0}:
+                result.errors.append(
+                    f"{prefix}.character_height_percent 在无人镜头中必须是 0 或 null"
+                )
+        elif character_mode == "tiny":
+            if not isinstance(character_height, (int, float)) or not 0.25 <= character_height <= 0.8:
+                result.errors.append(
+                    f"{prefix}.character_height_percent 必须在 0.25 到 0.8 之间"
+                )
+        else:
+            result.errors.append(f"{prefix}.character_mode 必须是 tiny 或 none")
+
+        colossus = shot.get("colossus_percent")
+        if not isinstance(colossus, (int, float)) or not 45 <= colossus <= 65:
+            result.errors.append(
+                f"{prefix}.colossus_percent 必须在 45 到 65 之间"
+            )
+
         negative = shot.get("negative_space_percent")
         if not isinstance(negative, (int, float)) or not 28 <= negative <= 42:
             result.errors.append(

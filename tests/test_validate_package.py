@@ -35,6 +35,8 @@ class ValidatePackageTests(unittest.TestCase):
         self.assertIn("primary_wonder", errors)
         self.assertIn("单段", errors)
         self.assertIn("paid_generation_authorized", errors)
+        self.assertIn("character_height_percent", errors)
+        self.assertIn("colossus_percent", errors)
 
     def test_cli_returns_nonzero_for_invalid_package(self):
         validator = load_script()

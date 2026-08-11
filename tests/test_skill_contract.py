@@ -63,6 +63,8 @@ class SkillContractTests(unittest.TestCase):
             "奇观升级",
         ]:
             self.assertIn(marker, text)
+        for marker in ["0.25%–0.8%", "超过 1%", "人物小于门钉", "45%–65%"]:
+            self.assertIn(marker, text)
 
     def test_image_prompt_reference_covers_full_visual_grammar(self):
         text = (SKILL / "references/image-prompts.md").read_text(encoding="utf-8")
@@ -85,6 +87,9 @@ class SkillContractTests(unittest.TestCase):
             "失败规避",
         ]:
             self.assertIn(marker, text)
+        self.assertIn("极小人物", text)
+        self.assertIn("0.25%–0.8%", text)
+        self.assertIn("45%–65%", text)
 
     def test_video_prompt_reference_covers_motion_and_stability(self):
         text = (SKILL / "references/video-prompts.md").read_text(encoding="utf-8")
@@ -106,6 +111,7 @@ class SkillContractTests(unittest.TestCase):
         text = (SKILL / "references/quality-gates.md").read_text(encoding="utf-8")
         for marker in ["100分", "85分", "阻塞", "局部重做", "历史素材"]:
             self.assertIn(marker, text)
+        self.assertIn("人物高度超过画面 1%", text)
 
     def test_shot_library_has_twelve_distinct_archetypes(self):
         text = (SKILL / "references/shot-library.md").read_text(encoding="utf-8")
