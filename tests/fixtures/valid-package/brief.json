@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "source_prompt": "巨月打开天门，两位同行者沿倒流天河赴约",
+  "shot_count": 2,
+  "duration_seconds": 10,
+  "aspect_ratio": "16:9",
+  "shots": [
+    {
+      "id": "01",
+      "primary_wonder": "巨月内部开启白玉天门",
+      "impossible_relationship": "直径数千公里的月轮内部拥有向云海开启的实体宫门",
+      "scale_ladder": ["人物", "白鸟", "山岳级门柱", "巨月"],
+      "negative_space_percent": 34,
+      "action_space_percent": 27
+    },
+    {
+      "id": "02",
+      "primary_wonder": "倒悬天河托举浮空宫阙",
+      "impossible_relationship": "天河从云海逆流向天空并托住大陆级天宫",
+      "scale_ladder": ["人物", "桥栏", "浮空山峰", "天宫大陆"],
+      "negative_space_percent": 38,
+      "action_space_percent": 25
+    }
+  ]
+}

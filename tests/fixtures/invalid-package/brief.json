@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "source_prompt": "失败夹具",
+  "shot_count": 2,
+  "duration_seconds": 10,
+  "aspect_ratio": "16:9",
+  "shots": [
+    {
+      "id": "01",
+      "primary_wonder": "重复天门",
+      "impossible_relationship": "天门悬在月内",
+      "scale_ladder": ["人物", "天门"],
+      "negative_space_percent": 34,
+      "action_space_percent": 27
+    },
+    {
+      "id": "02",
+      "primary_wonder": "重复天门",
+      "impossible_relationship": "天门悬在月内",
+      "scale_ladder": ["人物", "白鸟", "天门", "巨月"],
+      "negative_space_percent": 38,
+      "action_space_percent": 25
+    }
+  ]
+}

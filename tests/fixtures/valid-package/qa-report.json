@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "shots": ["01", "02"]
+}

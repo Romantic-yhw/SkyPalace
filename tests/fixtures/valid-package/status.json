@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "stage": "video_prompts_ready",
+  "paid_generation_authorized": false,
+  "blocked_reason": null
+}

@@ -247,7 +247,7 @@ git commit -m "feat: add sky palace project initializer"
 - Create: `tests/fixtures/valid-package/`
 - Create: `tests/fixtures/invalid-package/`
 
-- [ ] **Step 1: Write failing validator tests**
+- [x] **Step 1: Write failing validator tests**
 
 Create fixtures with two shots for fast tests. A valid fixture contains all required files, unique `primary_wonder` values, `impossible_relationship`, four `scale_ladder` items, positive percentages, continuous path text, one image prompt and one single-paragraph video prompt per shot. Invalid fixtures separately omit a scale ladder, duplicate a primary wonder, split a video prompt with blank lines, and omit paid-call status.
 
@@ -263,23 +263,23 @@ self.assertFalse(bad.ok)
 self.assertIn("scale_ladder", " ".join(bad.errors))
 ```
 
-- [ ] **Step 2: Run the validator test and verify RED**
+- [x] **Step 2: Run the validator test and verify RED**
 
 Run `python3 -m unittest tests.test_validate_package -v`.
 
 Expected: import or missing-function failure.
 
-- [ ] **Step 3: Implement the validator**
+- [x] **Step 3: Implement the validator**
 
 Use a `ValidationResult` dataclass. Validate required files, schema fields, shot count, sequential IDs, unique primary wonders, one impossible relationship, at least four scale references, `negative_space_percent` in `28..42`, `action_space_percent` in `22..32`, image prompt length at least 350 Chinese/Latin characters, video prompt length at least 260, no blank-line split in video prompts, and matching prompt file counts. Emit human-readable Chinese errors and optional JSON output from the CLI.
 
-- [ ] **Step 4: Run the validator test and verify GREEN**
+- [x] **Step 4: Run the validator test and verify GREEN**
 
 Run `python3 -m unittest tests.test_validate_package -v`.
 
 Expected: valid fixture passes and each invalid fixture fails for the intended reason.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/make-sky-palace-video/scripts/validate_package.py tests/test_validate_package.py tests/fixtures
