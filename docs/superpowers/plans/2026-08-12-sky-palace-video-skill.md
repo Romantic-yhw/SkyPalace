@@ -379,17 +379,17 @@ git commit -m "docs: add complete sky palace production example"
 - Create: `tests/test_repository_docs.py`
 - Create: `README.md`
 
-- [ ] **Step 1: Write failing README tests**
+- [x] **Step 1: Write failing README tests**
 
 Require the README to contain repository scope, prerequisites, installer and manual-copy installation, `$make-sky-palace-video`, one-line invocation, four delivery modes, generated directory tree, supported tool behavior, paid-call confirmation, no automatic publishing, validation commands and troubleshooting.
 
-- [ ] **Step 2: Run and verify RED**
+- [x] **Step 2: Run and verify RED**
 
 Run `python3 -m unittest tests.test_repository_docs -v`.
 
 Expected: FAIL because `README.md` does not exist.
 
-- [ ] **Step 3: Write README.md**
+- [x] **Step 3: Write README.md**
 
 Document both installation forms:
 
@@ -408,13 +408,13 @@ cp -R SkyPalace/skills/make-sky-palace-video ~/.codex/skills/
 
 Explain that media providers are optional, credentials remain outside the repo, generated media can cost money, and the Skill stops at `video_prompts_ready` when no provider is callable.
 
-- [ ] **Step 4: Run and verify GREEN**
+- [x] **Step 4: Run and verify GREEN**
 
 Run `python3 -m unittest tests.test_repository_docs -v`.
 
 Expected: PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add README.md tests/test_repository_docs.py
