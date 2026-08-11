@@ -189,7 +189,7 @@ git commit -m "feat: add sky palace skill contract"
 - Create: `tests/test_init_project.py`
 - Create: `skills/make-sky-palace-video/scripts/init_project.py`
 
-- [ ] **Step 1: Write failing initializer tests**
+- [x] **Step 1: Write failing initializer tests**
 
 Test that `main(["--output", tmp, "--slug", "moon-gate", "--prompt", prompt])` creates the exact production tree, writes a UTF-8 `brief.json` with schema version `1`, defaults to six shots, 30 seconds and `16:9`, initializes `status.json` at `briefed`, and refuses to overwrite a non-empty project directory unless `--force` is present.
 
@@ -216,23 +216,23 @@ class InitProjectTests(unittest.TestCase):
                 ])
 ```
 
-- [ ] **Step 2: Run the initializer test and verify RED**
+- [x] **Step 2: Run the initializer test and verify RED**
 
 Run `python3 -m unittest tests.test_init_project -v`.
 
 Expected: import or file-not-found failure because `init_project.py` is not implemented.
 
-- [ ] **Step 3: Implement the minimal initializer**
+- [x] **Step 3: Implement the minimal initializer**
 
 Implement `build_parser()`, `safe_slug()`, `create_project()` and `main(argv=None)` using only `argparse`, `json`, `pathlib`, `re` and `datetime`. Create `prompts/image`, `prompts/video`, `images`, `clips`; write `brief.json`, empty `world-bible.md`, `storyboard.md`, `qa-report.json` and `status.json`; never remove existing content.
 
-- [ ] **Step 4: Run the test and verify GREEN**
+- [x] **Step 4: Run the test and verify GREEN**
 
 Run `python3 -m unittest tests.test_init_project -v`.
 
 Expected: PASS with no warnings.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/make-sky-palace-video/scripts/init_project.py tests/test_init_project.py
