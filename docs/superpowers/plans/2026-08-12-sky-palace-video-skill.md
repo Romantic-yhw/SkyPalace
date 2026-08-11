@@ -38,7 +38,7 @@
 - Create: `tests/test_skill_contract.py`
 - Create: `tests/fixtures/baseline-v3-feedback.md`
 
-- [ ] **Step 1: Record the observed RED baseline**
+- [x] **Step 1: Record the observed RED baseline**
 
 Write the exact observed outcome and causes:
 
@@ -55,7 +55,7 @@ Failures:
 - image prompts were detailed but motion prompts lacked an equally strict grammar.
 ```
 
-- [ ] **Step 2: Write the failing Skill contract test**
+- [x] **Step 2: Write the failing Skill contract test**
 
 Create `tests/test_skill_contract.py` with `unittest`. It must assert that the Skill folder and all seven references exist, frontmatter contains only `name` and `description`, the description starts with `Use when`, `SKILL.md` routes the agent to the visual, wonder, image, video, shot and QA references, and the required terms `付费`, `一句话`, `status.json`, `单段` and `无遮挡` are present in the appropriate files.
 
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 3: Run the test and verify RED**
+- [x] **Step 3: Run the test and verify RED**
 
 Run:
 
@@ -124,7 +124,7 @@ Expected: FAIL because `skills/make-sky-palace-video` does not exist.
 - Create: `skills/make-sky-palace-video/references/*.md`
 - Create: `skills/make-sky-palace-video/scripts/`
 
-- [ ] **Step 1: Run the official initializer**
+- [x] **Step 1: Run the official initializer**
 
 Run:
 
@@ -139,7 +139,7 @@ python3 /Users/admin/.codex/skills/.system/skill-creator/scripts/init_skill.py m
 
 Expected: the Skill directory, `SKILL.md`, `agents/openai.yaml`, `scripts/` and `references/` are created.
 
-- [ ] **Step 2: Replace template content with the minimal orchestration contract**
+- [x] **Step 2: Replace template content with the minimal orchestration contract**
 
 Use exactly two frontmatter keys:
 
@@ -152,7 +152,7 @@ description: Use when a user wants to create Chinese celestial-palace spectacle 
 
 The body must require: one-sentence parsing with defaults; an original world bible; one primary wonder per shot; a four-level scale ladder; image prompt generation; single-paragraph video prompt generation; cost confirmation; tool-aware execution; `status.json`; targeted regeneration; and honest fallback when generation tools are unavailable.
 
-- [ ] **Step 3: Add minimal reference files with their permanent scope**
+- [x] **Step 3: Add minimal reference files with their permanent scope**
 
 Each reference initially contains its final H1 and a concise contract:
 
@@ -166,7 +166,7 @@ quality-gates.md  → pass/fail checks and regeneration boundary
 examples.md       → one complete production example
 ```
 
-- [ ] **Step 4: Run the contract test and verify GREEN**
+- [x] **Step 4: Run the contract test and verify GREEN**
 
 Run:
 
@@ -176,7 +176,7 @@ python3 -m unittest tests.test_skill_contract -v
 
 Expected: all Skill contract tests PASS.
 
-- [ ] **Step 5: Commit the core Skill contract**
+- [x] **Step 5: Commit the core Skill contract**
 
 ```bash
 git add skills tests/test_skill_contract.py tests/fixtures/baseline-v3-feedback.md

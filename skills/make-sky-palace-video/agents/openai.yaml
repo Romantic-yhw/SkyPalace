@@ -1,0 +1,4 @@
+interface:
+  display_name: "天宫奇观视频"
+  short_description: "一句话生成电影级东方天宫奇观图片与视频完整生产包工作流"
+  default_prompt: "使用 $make-sky-palace-video，把我的一句话做成天宫奇观视频。"
