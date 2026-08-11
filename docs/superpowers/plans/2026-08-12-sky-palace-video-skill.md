@@ -297,7 +297,7 @@ git commit -m "feat: validate sky palace production packages"
 - Modify: `skills/make-sky-palace-video/references/quality-gates.md`
 - Modify: `tests/test_skill_contract.py`
 
-- [ ] **Step 1: Strengthen tests before expanding references**
+- [x] **Step 1: Strengthen tests before expanding references**
 
 Add assertions for these observable requirements:
 
@@ -311,23 +311,23 @@ video-prompts:  locked first frame → camera path → character action → envi
 quality-gates:  score thresholds, blocking failures, targeted regeneration, no historic substitution
 ```
 
-- [ ] **Step 2: Run the strengthened contract test and verify RED**
+- [x] **Step 2: Run the strengthened contract test and verify RED**
 
 Run `python3 -m unittest tests.test_skill_contract -v`.
 
 Expected: FAIL on the new missing expert markers.
 
-- [ ] **Step 3: Write the final expert references**
+- [x] **Step 3: Write the final expert references**
 
 Write concise tables for fast retrieval plus exact prompt assembly rules. Include measurable values, at least twelve original spectacle archetypes, three architecture families, character continuity templates, weather and light behavior, camera motion limits, common failure symptoms and exact corrections. Keep every reference directly linked from `SKILL.md`; do not create nested references.
 
-- [ ] **Step 4: Run the contract test and verify GREEN**
+- [x] **Step 4: Run the contract test and verify GREEN**
 
 Run `python3 -m unittest tests.test_skill_contract -v`.
 
 Expected: PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/make-sky-palace-video/references tests/test_skill_contract.py

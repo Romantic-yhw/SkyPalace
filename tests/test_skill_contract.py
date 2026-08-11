@@ -51,6 +51,67 @@ class SkillContractTests(unittest.TestCase):
         self.assertIn("单段", video)
         self.assertIn("四级尺度链", wonder)
 
+    def test_wonder_design_defines_observable_spectacle_mechanics(self):
+        text = (SKILL / "references/wonder-design.md").read_text(encoding="utf-8")
+        for marker in [
+            "不可能关系",
+            "四级尺度链",
+            "出框延伸",
+            "前景遮挡",
+            "有效留白",
+            "延迟揭示",
+            "奇观升级",
+        ]:
+            self.assertIn(marker, text)
+
+    def test_image_prompt_reference_covers_full_visual_grammar(self):
+        text = (SKILL / "references/image-prompts.md").read_text(encoding="utf-8")
+        for marker in [
+            "输出约束",
+            "核心奇观",
+            "前景",
+            "中景",
+            "远景",
+            "极远景",
+            "建筑结构",
+            "人物连续性",
+            "摄影机",
+            "巨构占比",
+            "有效留白",
+            "行动区",
+            "光线",
+            "色彩",
+            "材质",
+            "失败规避",
+        ]:
+            self.assertIn(marker, text)
+
+    def test_video_prompt_reference_covers_motion_and_stability(self):
+        text = (SKILL / "references/video-prompts.md").read_text(encoding="utf-8")
+        for marker in [
+            "首帧锁定",
+            "摄影机轨迹",
+            "人物动作",
+            "分层环境运动",
+            "视差",
+            "揭示节拍",
+            "结束状态",
+            "连续性",
+            "防漂移",
+            "单段",
+        ]:
+            self.assertIn(marker, text)
+
+    def test_quality_gates_block_weak_or_fake_delivery(self):
+        text = (SKILL / "references/quality-gates.md").read_text(encoding="utf-8")
+        for marker in ["100分", "85分", "阻塞", "局部重做", "历史素材"]:
+            self.assertIn(marker, text)
+
+    def test_shot_library_has_twelve_distinct_archetypes(self):
+        text = (SKILL / "references/shot-library.md").read_text(encoding="utf-8")
+        for code in [f"W{i:02d}" for i in range(1, 13)]:
+            self.assertIn(code, text)
+
 
 if __name__ == "__main__":
     unittest.main()
