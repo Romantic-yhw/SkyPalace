@@ -112,6 +112,25 @@ class SkillContractTests(unittest.TestCase):
         for code in [f"W{i:02d}" for i in range(1, 13)]:
             self.assertIn(code, text)
 
+    def test_complete_example_contains_six_image_and_video_prompts(self):
+        text = (SKILL / "references/examples.md").read_text(encoding="utf-8")
+        self.assertIn("巨月打开天门，两位旧友沿倒流天河赴九重天宫旧约，30秒横屏。", text)
+        for marker in ["创作简报", "世界观锁定", "六镜头总表"]:
+            self.assertIn(marker, text)
+        for phase in ["召唤", "仰望", "进入", "穿越", "反转", "抵达"]:
+            self.assertIn(phase, text)
+        for wonder in [
+            "月印开天门",
+            "天河逆托万宫",
+            "镜海悬城",
+            "万柱穿云涡",
+            "天路横贯月腹",
+            "晨星环宫",
+        ]:
+            self.assertIn(wonder, text)
+        self.assertEqual(text.count("#### 图片提示词"), 6)
+        self.assertEqual(text.count("#### 视频提示词"), 6)
+
 
 if __name__ == "__main__":
     unittest.main()

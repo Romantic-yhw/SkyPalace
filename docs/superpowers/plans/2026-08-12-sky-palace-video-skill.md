@@ -340,17 +340,17 @@ git commit -m "docs: add cinematic wonder prompt system"
 - Modify: `skills/make-sky-palace-video/references/examples.md`
 - Modify: `tests/test_skill_contract.py`
 
-- [ ] **Step 1: Add failing example assertions**
+- [x] **Step 1: Add failing example assertions**
 
 Require one source sentence, one brief, one world bible, a six-row storyboard, six image prompts and six single-paragraph video prompts. Require the six primary wonders to be unique and require the sequence labels `召唤`, `仰望`, `进入`, `穿越`, `反转`, `抵达`.
 
-- [ ] **Step 2: Run and verify RED**
+- [x] **Step 2: Run and verify RED**
 
 Run `python3 -m unittest tests.test_skill_contract -v`.
 
 Expected: FAIL because the complete example is absent.
 
-- [ ] **Step 3: Write the complete example**
+- [x] **Step 3: Write the complete example**
 
 Use the input:
 
@@ -360,13 +360,13 @@ Use the input:
 
 Design six escalating primary wonders: moon-sealed gate, inverted celestial river, mirror court beneath a suspended continent, mountain-scale colonnade piercing a cloud vortex, causeway crossing the inside of a moon, and a final gate revealing a palace wrapped around a sunrise star. Each image prompt must follow the exact grammar and each video prompt must be one paragraph with specific camera and layered motion.
 
-- [ ] **Step 4: Run and verify GREEN**
+- [x] **Step 4: Run and verify GREEN**
 
 Run `python3 -m unittest tests.test_skill_contract -v`.
 
 Expected: PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/make-sky-palace-video/references/examples.md tests/test_skill_contract.py
